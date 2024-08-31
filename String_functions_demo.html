@@ -1,0 +1,100 @@
+<html>
+    <body>
+        <script>
+            document.write("hello")
+            str="This is Test";
+            // //search returns the index found
+            // console.log("In search:"+str.search(/test/g))
+            // console.log("In search:"+str.search(/test/gi)) //i for ignore case, g for global
+
+
+            // //match returns the string 
+            // console.log("in match:"+str.match(/test/g))//null cuz case sensitive
+            // console.log("in match:"+str.match(/test/gi))//Test as i for ignore case
+
+
+            // //string and substr
+            // console.log("in string:"+str.substring(3,9))
+            // //3 is startIndex 8 is endIndex 
+            // //substring excludes endIndex
+            // console.log("in string:"+str.substr(3,8))
+            // //here 3 is start index and 8 is total number of characters to be read
+            // //3 and 8 i.e. start index and end index are included
+
+
+
+
+
+
+            //length
+            console.log("length: "+str.length) //length is a property not a function
+
+
+            //charAt()
+            console.log("charAt:"+str.charAt(9))
+
+
+            s="this "
+            s1="taste "
+            s2="is good "
+            s3="and yummy!!!!!"
+            //concat
+            console.log("concat:"+ str.concat(" hii"))
+            console.log("concat:"+s.concat(s1,s2,s3))
+
+
+            //indexOf
+            console.log(str.indexOf("test"))//-1 cuz it is case sensitive so not found
+            console.log(str.indexOf("Test"))//returns the index of the first letter found in string
+
+
+
+            //split
+            console.log(str.split(" "))//delimiter is space
+            //returns array of strings splitted at delimiter
+            console.log(str.split("  "))//if two white spaces are given 
+            //str don't have two spaces delimier so it will return the whole str as it is without splitting i.e. no effect
+            s="rain in spain, is pain"
+            console.log(s.split(","))//['rain in spain', ' is pain']
+            console.log(str)
+
+            //to join the splittes string
+            console.log("join demo")
+            arr=s.split(",")
+            console.log(arr)
+            console.log("after join:- "+arr.join())
+
+
+
+            //toUpperCase and toLowerCase
+            console.log(str.toUpperCase())
+            console.log(str.toLowerCase())
+
+
+            //slice
+            console.log("slice: "+ str.slice(3,9))
+            //slices the string by given indexes and returns the sliced string and not remaining string
+            //endIndex i.e. 9 is excluded
+
+
+
+            //includes
+            console.log("includes:"+str.includes("test"))
+//return true/false
+//here op false cuz it is case sensitive
+
+// console.log("includes:"+str.includes(/"test"/i))//error cannot use regexp here
+            console.log("includes:"+ str.includes("Test"))//returns true
+
+
+            // console.log(str.splice())//error strings dont have splice function, splice method is for arrays, we can achieve splice in strings by using substr,slice 
+
+
+
+
+
+
+            
+        </script>
+    </body>
+</html>
