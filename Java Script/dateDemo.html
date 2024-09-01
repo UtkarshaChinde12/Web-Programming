@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <script>
+            function showdate(){
+                dt= new Date();
+                // alert(typeof(dt));
+                document.getElementById("mydiv").innerHTML=dt;
+                day=dt.getDay();//gives day of a week   For Monday=1 and onwards
+                date=dt.getDate();
+                month=dt.getMonth();//month starts from 0 so jan=0,feb=1,mar=3 and so on
+                // year=dt.getYear();//gives year as 124 ---> 1 stands for century
+                //24 stands for current year 
+                year=dt.getFullYear()
+                // alert(`Date is: ${day}-${month}-${year}`)
+                alert(`Today's Date is: ${date}-${month+1}-${year}`)
+
+
+
+                //creating customise date
+                //new Date(year,month,date,hours,mins,seconds,milliseconds)
+                dt1=new Date(2022,1,23);//gives whole date time 
+                //as month starts from 0, 1 is considered as Feb
+                dt1=new Date(2022,0,23);
+                alert(dt1);
+
+
+
+                //gettting the difference between two dates
+                dt2=new Date(2022,1,25);
+                dt3=new Date(2023,1,25);
+                diff= dt3.getTime() - dt2.getTime();
+                //gives time in milliseconds
+                //latest date is larger than any previous date
+                //1000 
+                //60*60 minutes (60 sec * 60 min)
+                //24 hours a day
+                days= diff / (1000*3600*24);
+                alert("the date difference is:"+ days)//output: 365 days
+                alert("difference in milliseconds: "+ (dt3-dt2));
+            }
+        </script>
+    </head>
+    <!-- <body onload="document.getElementById('mydiv').innerHTML=new Date()"> -->
+    <body onload="showdate()">
+        <div id="mydiv">
+            <h1>Hello</h1> 
+            <!-- this hello will not get displayed as it is overwritten by innerhtml value -->
+        </div>
+    </body>
+</html>
