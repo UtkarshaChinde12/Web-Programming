@@ -1,0 +1,56 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <div id="mydiv"></div>
+        <div id="mydiv1"></div>
+
+
+
+<!-- script tag is written here to remove the error: Cannot set properties of null (setting 'innerHTML') -->
+        <script>
+            //functions get called sequentially
+
+            //self-calling function
+            //self-calling functions are called only once
+            //function with no name is called as anonymous function
+            (function(){
+                alert("In self calling function")
+            })();//writing this parenthesis at the end of function defination makes the function call
+
+
+
+
+
+
+
+
+
+
+            //closure funcition
+            function f1()
+            {
+                a=10;
+                b=20;
+                //f2 is a closure function
+                //A closure function is a function which is nested in another functions and has access to parent function’s variables(parent scope varaiables).
+                //Closure functions can be called within the parent function only. i.e  we cannot call closure function outside the parent function
+
+                function f2(){
+                    return a+b;
+                }
+
+                s=f2(); //no error
+                document.getElementById("mydiv").innerHTML="addition is:"+s
+                // document.write("addition is:"+s)
+            }
+            f1()
+            // t=f2() //error : f2 not defined
+            // document.getElementById("mydiv1").innerHTML="addition is:"+s
+
+
+
+            
+        </script>
+    </body>
+</html>
